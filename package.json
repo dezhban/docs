@@ -1,0 +1,16 @@
+{
+  "name": "@dezhban/docs",
+  "version": "1.0.0",
+  "description": "Dezhban documents",
+  "main": "index.js",
+  "scripts": {
+    "docsify": "./node_modules/.bin/docsify",
+    "dev": "npm run docsify serve docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "docsify-cli": "^4.4.4"
+  }
+}
