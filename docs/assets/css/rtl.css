@@ -1,0 +1,21 @@
+html[dir=rtl] aside {
+  right: var(--sidebar-width)
+}
+
+html[dir=rtl] .app-nav {
+  right: 45px !important;
+  left: 80px !important;
+  text-align: left;
+}
+
+@media (min-width: 48em) {
+  html[dir=rtl] nav.app-nav {
+    margin-right: var(--sidebar-width) !important;
+    margin-left: unset !important;
+  }
+
+  html[dir=rtl] .sidebar+.content {
+    margin-left: unset;
+    margin-right: var(--sidebar-width);
+}
+}

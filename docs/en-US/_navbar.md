@@ -1,4 +1,4 @@
 
-* زبان
+* Language
   * [فارسی](/)
   * [English](/en-US/)
