@@ -26,10 +26,27 @@
     window.$docsify = {
       loadNavbar: true,
       loadSidebar: true,
-      rtl: {
-        body: "rtl",
-        side: "ltr",
-        bdo: "ltr"
+      i18n: {
+        languages: [
+          {
+            lang: "fa",
+            dir: "rtl",
+            url: "fa-IR",
+            title: {
+              prefix: "مستندان فنی دژبان",
+              seprator: "|",
+            },
+          },
+          {
+            lang: "en",
+            dir: "ltr",
+            url: "en-US",
+            title: {
+              prefix: "Dezhban Technical Document",
+              seprator: "|",
+            },
+          },
+        ]
       }
     }
   </script>
@@ -38,7 +55,7 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
-  <script src="assets/js/language.js"></script>
+  <script src="assets/js/i18n.js"></script>
 </body>
 
 </html>

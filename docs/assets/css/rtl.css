@@ -1,5 +1,6 @@
-html[dir=rtl] aside {
-  right: var(--sidebar-width)
+html[dir=rtl] .sidebar {
+  right: unset;
+  left: 100%;
 }
 
 html[dir=rtl] .app-nav {
@@ -8,14 +9,48 @@ html[dir=rtl] .app-nav {
   text-align: left;
 }
 
+html[dir=rtl] .sidebar-toggle {
+  right: 0;
+  left: unset;
+}
+
+html[dir=rtl] .sidebar-toggle .sidebar-toggle-button {
+  left: unset;
+  right: var(--sidebar-toggle-offset-left);
+}
+
 @media (min-width: 48em) {
   html[dir=rtl] nav.app-nav {
     margin-right: var(--sidebar-width) !important;
     margin-left: unset !important;
   }
 
+  html[dir=rtl] .sidebar {
+    transform: translateX(calc(var(--sidebar-width) * -1));
+  }
+
   html[dir=rtl] .sidebar+.content {
     margin-left: unset;
     margin-right: var(--sidebar-width);
+  }
+
+  html[dir=rtl] .sidebar-toggle {
+    left: unset;
+    right: 0;
+    transform: translateX(calc(var(--sidebar-width) * -1));
+  }
+
+  html[dir=rtl] body.close .sidebar-toggle,
+  html[dir=rtl] body.close .sidebar {
+    transform: translateX(0);
+  }
 }
+
+@media (max-width: 47.99em) {
+
+  html[dir=rtl] body.close .sidebar,
+  html[dir=rtl] body.close .sidebar-toggle,
+  html[dir=rtl] body.close .sidebar+.content {
+    transform: translateX(calc(var(--sidebar-width) * -1));
+  }
 }
