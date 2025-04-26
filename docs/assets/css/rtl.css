@@ -19,6 +19,10 @@ html[dir=rtl] .sidebar-toggle .sidebar-toggle-button {
   right: var(--sidebar-toggle-offset-left);
 }
 
+html[dir=rtl] pre, html[dir=rtl] code {
+  direction: ltr;
+}
+
 @media (min-width: 48em) {
   html[dir=rtl] nav.app-nav {
     margin-right: var(--sidebar-width) !important;
